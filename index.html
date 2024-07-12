@@ -7,15 +7,6 @@
             window[dataLayerName] = window[dataLayerName] || [];
             window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
             var firstScript = document.getElementsByTagName('script')[0];
-            firstScript.push({
-            matching: {
-                matching_mode: 'profile_id',
-                matching: { 
-                    profile_id: '668e721a4c33ebb606456386', 
-                    db_id:2 
-                    }
-                }
-            })
             var script = document.createElement('script');
             var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
             script.async = true;
@@ -25,7 +16,15 @@
                 firstScript.parentNode.insertBefore(script, firstScript);
             }
            
-
+            script.push({
+            matching: {
+                matching_mode: 'profile_id',
+                matching: { 
+                    profile_id: '668e721a4c33ebb606456386', 
+                    db_id:2 
+                    }
+                }
+            })
         }(window, document, 'acDataLayer', 'ATM-6Aaqoap3vVYTg-2Ov'));
     </script>
 
