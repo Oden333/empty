@@ -5,7 +5,16 @@
    <script>
         (function (window, document, dataLayerName, containerID) {
             window[dataLayerName] = window[dataLayerName] || [];
-            window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
+            window[dataLayerName].push({ 
+                'start': new Date().getTime(), 
+                event: 'actm-js',
+                matching: {
+                matching_mode: 'profile_id',
+                matching: { 
+                    profile_id: '668e721a4c33ebb606456386', 
+                    db_id:2 
+                    }
+                }});
             var firstScript = document.getElementsByTagName('script')[0];
             var script = document.createElement('script');
             var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
@@ -15,15 +24,17 @@
             if (firstScript && firstScript.parentNode) {
                 firstScript.parentNode.insertBefore(script, firstScript);
             }
-            acDataLayer.push({
-            matching: {
-                matching_mode: 'profile_id',
-                matching: { 
-                    profile_id: '668e721a4c33ebb606456386', 
-                    db_id:2 
-                    }
-                }
-            })
+            // //Хуета чтобы сматчить профиль
+            // acDataLayer.push({
+            // matching: {
+            //     matching_mode: 'profile_id',
+            //     matching: { 
+            //         profile_id: '668e721a4c33ebb606456386', 
+            //         db_id:2 
+            //         }
+            //     }
+            // })
+            
             // matching: {
             //     matching_mode: 'altcraft_client_id',
             //     matching: { 
