@@ -9,26 +9,29 @@
    
    <script>
         (function (window, document, dataLayerName, containerID) {
+            
             window[dataLayerName] = window[dataLayerName] || [];
             window[dataLayerName].push({ 'start': new Date().getTime(), event: 'actm-js' });
             var firstScript = document.getElementsByTagName('script')[0];
             var script = document.createElement('script');
             var dl = dataLayerName !== 'acDataLayer' ? '&l=' + dataLayerName : '';
+            
             script.async = true;
             script.src = 'https://pxl.ismail-galimov.dev.altkraft.com/actm/js/actm.js?id=' + containerID + dl;
             script.type = 'module';
+            
             if (firstScript && firstScript.parentNode) {
                 firstScript.parentNode.insertBefore(script, firstScript);
             }
+        
         }(window, document, 'acDataLayer', 'ATM-6Aaqoap3vVYTg-2Ov'));
     </script>
     <script>
         acDataLayer.push({
             matching: {
-                matching_mode: 'profile_id',
+                matching_mode: 'email',
                 matching: { 
-                    profile_id: '66d99a3e8897fbffcccfd743', 
-                    db_id:4 
+                    email: "ksdfgjh@mail.ru"
                     }
                 }
             })
@@ -116,6 +119,8 @@
 
         </section>
     <!-- END OF FORM CODE PART      -->
+
+
         <section style="margin-bottom: 40px;">
             <h2>Раздел 3: Галерея изображений</h2>
             <div style="display: flex; justify-content: space-around;">
